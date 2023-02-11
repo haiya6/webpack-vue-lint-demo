@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { VueLoaderPlugin } = require('vue-loader')
@@ -9,7 +11,7 @@ const { DefinePlugin } = require('webpack')
 const webpackConfig = {
   mode: 'development',
   entry: {
-    main: path.resolve(`src/index.ts`)
+    main: path.resolve('src/index.ts')
   },
   module: {
     rules: [
@@ -42,8 +44,8 @@ const webpackConfig = {
       template: path.resolve('index.html')
     }),
     new DefinePlugin({
-      __VUE_OPTIONS_API__: `false`,
-      __VUE_PROD_DEVTOOLS__: `false`
+      __VUE_OPTIONS_API__: 'false',
+      __VUE_PROD_DEVTOOLS__: 'false'
     })
   ]
 }
