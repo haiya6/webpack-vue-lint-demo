@@ -1,9 +1,9 @@
 /* eslint-disable */
-
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { VueLoaderPlugin } = require('vue-loader')
 const { DefinePlugin } = require('webpack')
+const ESLintPlugin = require('eslint-webpack-plugin');
 
 /**
  * @type {import('webpack').Configuration}
@@ -46,6 +46,9 @@ const webpackConfig = {
     new DefinePlugin({
       __VUE_OPTIONS_API__: 'false',
       __VUE_PROD_DEVTOOLS__: 'false'
+    }),
+    new ESLintPlugin({
+      extensions: ['ts', 'js', 'vue']
     })
   ]
 }
