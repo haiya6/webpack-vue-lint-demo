@@ -19,7 +19,7 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['.eslintrc.js', 'prettier.config.js'],
+      files: ['.eslintrc.js', 'prettier.config.js', '.stylelintrc.js'],
       env: {
         node: true
       }

@@ -3,7 +3,8 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { VueLoaderPlugin } = require('vue-loader')
 const { DefinePlugin } = require('webpack')
-const ESLintPlugin = require('eslint-webpack-plugin');
+const ESLintPlugin = require('eslint-webpack-plugin')
+const StylelintPlugin = require('stylelint-webpack-plugin')
 
 /**
  * @type {import('webpack').Configuration}
@@ -49,6 +50,9 @@ const webpackConfig = {
     }),
     new ESLintPlugin({
       extensions: ['ts', 'js', 'vue']
+    }),
+    new StylelintPlugin({
+      extensions: ['css', 'scss', 'vue', 'html']
     })
   ]
 }
