@@ -1,7 +1,5 @@
 module.exports = {
-  extends: [
-    'stylelint-config-recommended'
-  ],
+  extends: ['stylelint-config-recommended'],
   overrides: [
     {
       files: ['**/*.{html,vue}'],
