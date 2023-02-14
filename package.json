@@ -3,9 +3,12 @@
     "dev": "webpack-dev-server",
     "eslint": "eslint . --fix",
     "stylelint": "stylelint \"**/*.{vue,scss,html,css}\" --fix",
-    "prettier": "prettier . --write"
+    "prettier": "prettier . --write",
+    "postinstall": "husky install"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.4.3",
+    "@commitlint/config-conventional": "^17.4.3",
     "@typescript-eslint/eslint-plugin": "^5.51.0",
     "@typescript-eslint/parser": "^5.51.0",
     "css-loader": "^6.7.3",
@@ -13,6 +16,7 @@
     "eslint-plugin-vue": "^9.9.0",
     "eslint-webpack-plugin": "^4.0.0",
     "html-webpack-plugin": "^5.5.0",
+    "husky": "^8.0.3",
     "postcss-html": "^1.5.0",
     "postcss-scss": "^4.0.6",
     "prettier": "^2.8.4",
